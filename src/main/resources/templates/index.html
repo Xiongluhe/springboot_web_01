@@ -2,6 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <!--	<base th:href="|${#request.getContextPath()}/|">-->
+	<base href="/">
 	<meta charset="UTF-8">
 	<title>Title</title>
 </head>
@@ -22,8 +23,8 @@
 			<th th:text="${person.name}">姓名</th>
 			<th th:text="${person.age}">年龄</th>
 			<th>
-<!--				<a th:href="#">编辑</a>-->
-				<a th:href="|/delete/${person.id}|">删除</a>
+				<a th:href="|toUpd/${person.id}|">编辑</a>
+				<a th:href="|delete/${person.id}|">删除</a>
 			</th>
 		</tr>
 	</table>

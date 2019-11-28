@@ -36,4 +36,20 @@ public class TestPerson {
 		return "redirect:/hello";
 	}
 	
+	@RequestMapping("toUpd/{id}")
+	public String toUpd(@PathVariable Integer id, ModelMap map){
+		
+		Person person = personService.getById(id);
+		map.put("person", person);
+		
+		return "upd";
+	}
+	
+	@RequestMapping("upd")
+	public String upd(Person person){
+		
+		personService.updateById(person);
+		
+		return "redirect:/hello";
+	}
 }

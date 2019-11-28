@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+<!--	<base th:href="|${#request.getContextPath()}/|">-->
 	<meta charset="UTF-8">
 	<title>Title</title>
 </head>
@@ -11,12 +12,19 @@
 	<h2>人员列表</h2>
 	<table>
 		<tr>
+			<th>ID</th>
 			<th>姓名</th>
 			<th>年龄</th>
+			<th>操作</th>
 		</tr>
 		<tr th:each="person:${personList}">
+			<th th:text="${person.id}">ID</th>
 			<th th:text="${person.name}">姓名</th>
 			<th th:text="${person.age}">年龄</th>
+			<th>
+<!--				<a th:href="#">编辑</a>-->
+				<a th:href="|/delete/${person.id}|">删除</a>
+			</th>
 		</tr>
 	</table>
 

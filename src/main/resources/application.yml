@@ -22,5 +22,5 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     
   thymeleaf:
-    #¹Ø±ÕÒ³Ãæ»º´æ
+    #å…³é—­é¡µé¢ç¼“å­˜
     cache: false

@@ -27,4 +27,12 @@ public class TestPerson {
 		return "index";
 	}
 	
+	@RequestMapping("delete/{id}")
+	public String delete(Integer id){
+		
+		personService.removeById(id);
+		
+		return "redirect:/hello";
+	}
+	
 }

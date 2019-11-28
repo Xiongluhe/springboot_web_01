@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.experimental.Accessors;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
@@ -17,6 +16,7 @@ import java.util.Map;
 //@ConfigurationProperties(prefix = "home.person")
 @TableName("t_person")
 public class Person implements Serializable {
+	private Integer id;
 	private String name;
 	private Integer age;
 	
